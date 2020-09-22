@@ -1,17 +1,16 @@
 import React from "react";
+import ShopPage from "./pages/shopPage/shopPage.component";
 import HomePage from "./pages/homePage/homePage.component";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import "./App.scss";
-
-const TopicList = () => <h1>Topic List Page</h1>;
-const TopicDetail = () => <h1>Topic Detail Page</h1>;
 
 function App() {
   return (
     <div className="App">
-      <Route path="/" component={HomePage} exact />
-      <Route path="/topic" component={TopicList} />
-      <Route path="/topic:topicId" component={TopicDetail} />
+      <Switch>
+        <Route path="/" component={HomePage} exact />
+        <Route path="/shop" component={ShopPage} exact />
+      </Switch>
     </div>
   );
 }

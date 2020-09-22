@@ -2,8 +2,7 @@ import React from "react";
 import DirectoryMenu from "../../components/directory-menu/directoryMenu.component";
 import "./homepage.styles.scss";
 
-const HomePage = (props) => {
-  console.log(props);
+const HomePage = () => {
   return (
     <div className="homepage">
       <DirectoryMenu />

@@ -42,13 +42,8 @@ const DirectoryMenu = () => {
 
   return (
     <div className="directory-menu">
-      {sections.section.map((item) => (
-        <MenuItem
-          key={item.id}
-          title={item.title.toUpperCase()}
-          size={item.size}
-          imgUrl={item.imageUrl}
-        />
+      {sections.section.map(({ id, ...otherSectionProps }) => (
+        <MenuItem key={id} {...otherSectionProps} />
       ))}
     </div>
   );
